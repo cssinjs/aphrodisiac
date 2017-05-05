@@ -28,6 +28,7 @@ export default function aphrodisiac(jss, options) {
 
     const style = rules.reduce(mergeStyles, {})
     sheet.addRule(className, style, {className})
+    sheet = sheet.deploy()
 
     return className
   }
@@ -44,7 +45,7 @@ export default function aphrodisiac(jss, options) {
 
   function reset() {
     sheet.detach()
-    jss.sheets.remove(sheet)
+    jss.removeStyleSheet(sheet)
     sheet = renderSheet()
   }
 
