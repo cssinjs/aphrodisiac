@@ -44,7 +44,7 @@ export default function aphrodisiac(jss, options) {
 
   function reset() {
     sheet.detach()
-    jss.sheets.remove(sheet)
+    jss.removeStyleSheet(sheet)
     sheet = renderSheet()
   }
 
