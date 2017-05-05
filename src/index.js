@@ -28,6 +28,7 @@ export default function aphrodisiac(jss, options) {
 
     const style = rules.reduce(mergeStyles, {})
     sheet.addRule(className, style, {className})
+    sheet = sheet.deploy()
 
     return className
   }
