@@ -1,7 +1,7 @@
 {
-  "name": "aphrodite-jss",
+  "name": "@kohlmannj/aphrodite-jss",
   "description": "Aphrodite-like API on top of JSS.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "scripts": {
     "all": "npm run lint && npm run build",
     "clean": "rm -fr ./lib/*",
@@ -11,7 +11,8 @@
     "build:min": "cross-env NODE_ENV=production webpack src/index.js dist/aphrodite-jss.min.js",
     "lint": "eslint ./src ./tests ./benchmark ./*.js",
     "lint:staged": "lint-staged",
-    "prepublish": "npm run all"
+    "prepublish": "npm run all",
+    "postinstall": "install-self-peers -- --ignore-scripts"
   },
   "author": {
     "name": "Oleg Slobodskoi",
@@ -19,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:cssinjs/aphrodite-jss.git"
+    "url": "git@github.com:kohlmannj/aphrodite-jss.git"
   },
   "keywords": [
     "jss",
@@ -34,6 +35,7 @@
     "node": ">=4.0.0"
   },
   "devDependencies": {
+    "@team-griffin/install-self-peers": "^1.1.0",
     "babel-cli": "^6.5.1",
     "babel-core": "^6.5.1",
     "babel-eslint": "^7.1.1",
@@ -56,9 +58,11 @@
     "pre-commit": "^1.2.0",
     "webpack": "^2.5.1"
   },
+  "peerDependencies": {
+    "@kohlmannj/jss": "^7.2.0",
+    "jss-preset-default": "^2.0.0"
+  },
   "dependencies": {
-    "jss": "^7.1.2",
-    "jss-preset-default": "^2.0.0",
     "murmurhash-js": "^1.0.0"
   },
   "lint-staged": {
