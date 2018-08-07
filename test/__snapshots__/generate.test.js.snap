@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`css implements override logic 1`] = `
+".red-3870469943--blue-268834934 {
+  color: blue;
+}"
+`;
+
+exports[`css returns a CSS string for a single property 1`] = `
+".red-3870469943 {
+  color: red;
+}"
+`;
+
+exports[`css supports font faces 1`] = `
+"@font-face {
+  font-family: Roboto;
+  src: local('Roboto'), local('Roboto-Regular'), url('https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2') format('woff2');
+}"
+`;
+
+exports[`css supports keyframe 1`] = `
+"@keyframes anim1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}"
+`;
+
+exports[`css supports media queries 1`] = `
+"@media (max-width: 400px) {
+  .red-0-0 {
+    color: red;
+  }
+}"
+`;
