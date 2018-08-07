@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`css generates class names 1`] = `"red-3870469943--blue-268834934"`;
